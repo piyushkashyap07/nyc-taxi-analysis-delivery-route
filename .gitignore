@@ -189,17 +189,20 @@ cython_debug/
 # Jupyter notebook checkpoints
 .ipynb_checkpoints/
 
-# Output files
+# Output files (excluded from git)
 outputs/
 results/
 figures/
 plots/
-*.png
-*.jpg
-*.jpeg
-*.pdf
-*.svg
-*.html
+
+# But allow assets folder for documentation
+!assets/
+!assets/*.png
+!assets/*.jpg
+!assets/*.jpeg
+!assets/*.pdf
+!assets/*.svg
+!assets/*.html
 
 # Logs
 *.log
