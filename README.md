@@ -121,8 +121,8 @@ cognizant/
 
 1. Clone the repository:
 ```bash
-git clone <repository-url>
-cd cognizant
+git clone https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route.git
+cd nyc-taxi-analysis-delivery-route
 ```
 
 2. Install dependencies:
@@ -135,12 +135,14 @@ pip install -r requirements.txt
 data/Cognizant assignment data - NYC Taxi 2023.csv
 ```
 
+**Note**: The data file is included in the repository and will be automatically loaded by the analysis script.
+
 ## Usage
 
 ### Method 1: Direct Execution (Recommended)
 ```bash
 # Navigate to project directory
-cd cognizant
+cd nyc-taxi-analysis-delivery-route
 
 # Install dependencies (if not already installed)
 pip install -r requirements.txt
@@ -378,6 +380,31 @@ For questions or issues:
 2. Review the code comments and docstrings
 3. Create an issue with detailed error information
 4. Include system specifications and Python version
+
+## GitHub Repository
+
+This project is hosted on GitHub: [https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route](https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route)
+
+### Quick Start
+```bash
+# Clone the repository
+git clone https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route.git
+
+# Navigate to project directory
+cd nyc-taxi-analysis-delivery-route
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run the analysis
+python main.py
+```
+
+### Repository Structure
+- **Source Code**: All analysis modules in `src/modules/`
+- **Data**: NYC taxi dataset in `data/` directory
+- **Documentation**: Comprehensive README with usage instructions
+- **Dependencies**: Listed in `requirements.txt`
 
 ---
 

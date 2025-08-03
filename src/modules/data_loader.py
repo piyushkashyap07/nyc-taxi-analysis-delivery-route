@@ -34,11 +34,25 @@ def load_and_preprocess_data(file_path):
     print("\nFirst few rows:")
     print(df.head())
     
-    # Convert datetime columns
+    # Convert datetime columns with error handling
     datetime_cols = ['tpep_pickup_datetime', 'tpep_dropoff_datetime']
     for col in datetime_cols:
         if col in df.columns:
-            df[col] = pd.to_datetime(df[col])
+            # Clean invalid datetime values first
+            df[col] = df[col].astype(str)
+            
+            # Fix common datetime issues
+            # Replace "24:" with "00:" (next day)
+            df[col] = df[col].str.replace(' 24:', ' 00:', regex=False)
+            
+            # Convert to datetime with error handling
+            df[col] = pd.to_datetime(df[col], errors='coerce')
+            
+            # Remove rows with invalid datetime
+            invalid_dates = df[col].isna()
+            if invalid_dates.sum() > 0:
+                print(f"Removing {invalid_dates.sum()} rows with invalid {col}")
+                df = df[~invalid_dates]
     
     # Calculate trip duration in minutes
     if 'tpep_pickup_datetime' in df.columns and 'tpep_dropoff_datetime' in df.columns:
