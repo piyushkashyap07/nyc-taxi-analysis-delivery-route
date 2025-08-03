@@ -2,57 +2,9 @@
 
 A comprehensive data analysis and machine learning project for NYC Yellow Taxi trip data, featuring exploratory data analysis, predictive modeling, route optimization, and AI-powered insights.
 
-## Project Requirements & Implementation
+## Overview
 
-### What Was Asked
-
-The project requirements included:
-
-1. **Modular Code Structure**: Refactor the monolithic `main.py` file into multiple, smaller, and more organized files to achieve better code structure and maintainability.
-
-2. **Professional Code Style**: Remove all symbols and icons from the codebase to make it cleaner and more professional.
-
-3. **Specific Data File Usage**: Use the specific data file "Cognizant assignment data - NYC Taxi 2023.csv" for all analysis.
-
-4. **Complete File Organization**: Ensure all necessary files are properly organized in the folder structure.
-
-### How It Was Implemented
-
-#### 1. Modular Architecture Implementation
-- **Before**: Single monolithic `main.py` file containing all functionality
-- **After**: Organized into 5 specialized modules:
-  - `src/modules/data_loader.py`: Data loading and preprocessing
-  - `src/modules/exploratory_analysis.py`: EDA and visualizations  
-  - `src/modules/machine_learning.py`: ML models and predictions
-  - `src/modules/route_optimization.py`: Graph theory and optimization
-  - `src/modules/genai_integration.py`: AI-powered analysis
-
-#### 2. Professional Code Style Implementation
-- **Removed**: All emoji icons (🚕, 📊, 🔍, ❌, 🎉, etc.)
-- **Removed**: Bold formatting and special symbols
-- **Replaced**: Bullet points (•) with standard dashes (-)
-- **Result**: Clean, professional code appearance suitable for enterprise environments
-
-#### 3. Data File Configuration
-- **Specified**: Exact file name "Cognizant assignment data - NYC Taxi 2023.csv"
-- **Located**: In `data/` directory for proper organization
-- **Configured**: Automatic loading in `main.py` with correct path
-- **Verified**: File presence and accessibility
-
-#### 4. Complete File Structure
-- **Created**: Professional Python package structure with `__init__.py` files
-- **Organized**: Source code in `src/modules/` directory
-- **Separated**: Configuration files (requirements.txt, README.md) in root
-- **Established**: Output directory for generated files
-- **Documented**: Comprehensive README with usage instructions
-
-### Key Benefits Achieved
-
-1. **Maintainability**: Each module has single responsibility
-2. **Scalability**: Easy to add new features or modify existing ones
-3. **Professionalism**: Industry-standard code organization
-4. **Reusability**: Modules can be imported independently
-5. **Clarity**: Clear separation of concerns and functionality
+This project provides a complete analysis pipeline for NYC taxi trip data, delivering actionable insights for fleet management, revenue optimization, and operational efficiency. The modular architecture ensures maintainability and scalability while providing professional-grade analysis capabilities.
 
 ## Project Structure
 
@@ -123,130 +75,36 @@ cognizant/
 
 ## Installation
 
-1. Clone the repository:
-```bash
-git clone https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route.git
-cd nyc-taxi-analysis-delivery-route
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Ensure the data file is in the correct location:
-```
-data/Cognizant assignment data - NYC Taxi 2023.csv
-```
-
-**Note**: The data file is included in the repository and will be automatically loaded by the analysis script.
+1. Clone the repository and navigate to the project directory
+2. Install dependencies: `pip install -r requirements.txt`
+3. The data file is included in the repository and will be automatically loaded
 
 ## Usage
 
-### Method 1: Direct Execution (Recommended)
+### Quick Start
 ```bash
-# Navigate to project directory
-cd nyc-taxi-analysis-delivery-route
-
-# Install dependencies (if not already installed)
-pip install -r requirements.txt
-
-# Run the complete analysis
 python main.py
 ```
 
-### Method 2: Python Import
+### Advanced Usage
 ```python
-# Import and run quick analysis
-from main import run_quick_analysis
-run_quick_analysis()
-
-# Import and run full analysis pipeline
-from main import run_full_analysis
-df, model_results, ai_report = run_full_analysis()
-
-# Import and run main function directly
-from main import main
-df, model_results, ai_report = main()
+# Import and run specific analyses
+from main import run_quick_analysis, run_full_analysis
+run_quick_analysis()  # Quick analysis
+df, model_results, ai_report = run_full_analysis()  # Complete pipeline
 ```
 
-### Method 3: Step-by-Step Execution
-```python
-# Import specific modules
-from src.modules.data_loader import load_and_preprocess_data
-from src.modules.exploratory_analysis import perform_eda
-from src.modules.machine_learning import build_prediction_model
-from src.modules.route_optimization import route_optimization_analysis
-from src.modules.genai_integration import generate_technical_summaries
-
-# Load data
-df = load_and_preprocess_data("data/Cognizant assignment data - NYC Taxi 2023.csv")
-
-# Run individual analyses
-df_clean = perform_eda(df)
-model_results = build_prediction_model(df_clean)
-route_optimization_analysis(df_clean)
-generate_technical_summaries()
-```
-
-### Expected Output
-When you run the analysis, you'll see:
-- Data loading and preprocessing progress
-- Exploratory data analysis results
-- Machine learning model training and evaluation
-- Route optimization analysis
-- AI-powered insights generation
-- Visualization files saved to `outputs/` directory
-
-### Generated Files
-After running the analysis, check the `outputs/` directory for:
-- `taxi_analysis_cleaned_data.csv` - Preprocessed dataset
-- `taxi_analysis_model.pkl` - Trained machine learning model
-- Various `.png` files - Visualizations and charts
-- `nyc_taxi_pickup_map.html` - Interactive map (if coordinates available)
-
-## Expected Analysis Results
-
-When you run the analysis, you'll get comprehensive insights including:
-
-### Key Insights You'll Discover:
-- **Trip Duration Patterns**: Distribution and median trip times
-- **Revenue Optimization**: Peak hours with highest average fares
-- **Location Analysis**: Busiest pickup zones and demand hotspots
-- **Customer Behavior**: Passenger-tip relationships and payment preferences
-- **Temporal Trends**: Daily, weekly, and monthly demand patterns
-- **ML Predictions**: Trip duration forecasting with feature importance
-- **Route Optimization**: Network analysis for delivery planning
-- **Business Recommendations**: AI-powered insights for operational improvements
-
-### Generated Output Files:
-After running the analysis, check the `outputs/` directory for:
-- `taxi_analysis_cleaned_data.csv` - Preprocessed dataset
-- `taxi_analysis_model.pkl` - Trained machine learning model
-- Various visualization files (.png) - Charts and graphs
-- `nyc_taxi_pickup_map.html` - Interactive map (if coordinates available)
+### Output
+The analysis generates:
+- Preprocessed dataset (`taxi_analysis_cleaned_data.csv`)
+- Trained machine learning model (`taxi_analysis_model.pkl`)
+- Visualization files (`.png` format)
+- Interactive map (`nyc_taxi_pickup_map.html`)
 
 
-## Key Deliverables
 
-### Analysis Results
-- **Cleaned Dataset**: Preprocessed taxi trip data
-- **Trained Models**: Machine learning models for trip duration prediction
-- **Visualizations**: Comprehensive charts and graphs
-- **Interactive Map**: Geospatial visualization of pickup locations
 
-### Business Insights
-- Peak revenue hours and demand patterns
-- Optimal fleet allocation strategies
-- Route optimization recommendations
-- Dynamic pricing opportunities
-- Operational efficiency improvements
 
-### Technical Reports
-- Model performance metrics
-- Feature importance rankings
-- Prediction accuracy analysis
-- Risk assessment and mitigation strategies
 
 ## Business Applications
 
@@ -307,93 +165,29 @@ After running the analysis, check the `outputs/` directory for:
 ### Interactive Files
 - `outputs/nyc_taxi_pickup_map.html`: Interactive map (if coordinates available)
 
-## Technical Requirements
+## Requirements
 
-### Python Version
-- Python 3.8 or higher
-
-### Key Libraries
-- **Data Processing**: pandas, numpy
-- **Visualization**: matplotlib, seaborn
-- **Machine Learning**: scikit-learn, joblib
-- **Graph Theory**: networkx, scipy
-- **Geospatial**: folium
-- **Optional AI**: openai, langchain
-
-### System Requirements
-- Minimum 4GB RAM
-- 2GB free disk space for outputs
-- Internet connection for map generation
+- Python 3.8+
+- 4GB RAM minimum
+- Key libraries: pandas, numpy, matplotlib, seaborn, scikit-learn, networkx, folium
+- See `requirements.txt` for complete dependencies
 
 ## Troubleshooting
 
-### Common Issues
+- **Data file not found**: Ensure the CSV file is in the `data/` directory
+- **Missing dependencies**: Run `pip install -r requirements.txt`
+- **Memory issues**: Close other applications or reduce sample size
+- **Visualization errors**: Check matplotlib backend configuration
 
-1. **Data File Not Found**
-   - Ensure the CSV file is in the `data/` directory
-   - Check file name matches exactly: "Cognizant assignment data - NYC Taxi 2023.csv"
 
-2. **Missing Dependencies**
-   - Run: `pip install -r requirements.txt`
-   - For specific errors, install missing packages individually
-
-3. **Memory Issues**
-   - Reduce sample size in route optimization
-   - Use smaller dataset for testing
-   - Close other applications to free memory
-
-4. **Visualization Errors**
-   - Ensure matplotlib backend is properly configured
-   - Check if display is available (for headless servers)
-
-### Performance Optimization
-
-1. **Large Datasets**
-   - Use data sampling for initial testing
-   - Implement chunked processing for memory efficiency
-   - Consider using dask for very large datasets
-
-2. **Model Training**
-   - Reduce hyperparameter search space
-   - Use fewer estimators for faster training
-   - Enable parallel processing where available
-
-## API Integration
-
-### OpenAI Integration
-To enable AI-powered analysis:
-
-1. Install OpenAI: `pip install openai`
-2. Set your API key: `export OPENAI_API_KEY="your-key"`
-3. Uncomment OpenAI imports in genai_integration.py
-4. Replace sample outputs with actual API calls
-
-### Custom API Integration
-- Modify `create_ai_prompt_template()` for different AI services
-- Update `generate_technical_summaries()` for custom prompts
-- Extend `create_ai_analysis_report()` for specific business needs
 
 ## Contributing
 
-### Development Setup
 1. Fork the repository
 2. Create a feature branch
-3. Install development dependencies
-4. Make your changes
-5. Add tests for new functionality
-6. Submit a pull request
-
-### Code Style
-- Follow PEP 8 guidelines
-- Use descriptive variable names
-- Add docstrings to all functions
-- Include type hints where appropriate
-
-### Testing
-- Add unit tests for new modules
-- Test with different dataset sizes
-- Verify output file generation
-- Check visualization quality
+3. Make your changes following PEP 8 guidelines
+4. Add tests for new functionality
+5. Submit a pull request
 
 ## License
 
@@ -401,42 +195,9 @@ This project is for educational and research purposes. Please ensure compliance 
 
 ## Support
 
-For questions or issues:
-1. Check the troubleshooting section
-2. Review the code comments and docstrings
-3. Create an issue with detailed error information
-4. Include system specifications and Python version
+For questions or issues, please check the troubleshooting section or create an issue with detailed error information.
 
-## GitHub Repository
 
-This project is hosted on GitHub: [https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route](https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route)
-
-### Quick Start
-```bash
-# Clone the repository
-git clone https://github.com/piyushkashyap07/nyc-taxi-analysis-delivery-route.git
-
-# Navigate to project directory
-cd nyc-taxi-analysis-delivery-route
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run the analysis
-python main.py
-```
-
-### Repository Structure
-- **Source Code**: All analysis modules in `src/modules/`
-- **Data**: NYC taxi dataset in `data/` directory
-- **Documentation**: Comprehensive README with usage instructions
-- **Dependencies**: Listed in `requirements.txt`
-- **Assets**: Visualization examples in `assets/` directory
-
-### Example Visualizations
-After running the analysis, you can copy visualization files to the `assets/` folder to showcase your results.
-
-This allows you to include actual analysis results in your documentation while maintaining a clean repository structure.
 
 ## Analysis Results & Visualizations
 
